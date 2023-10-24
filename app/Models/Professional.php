@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Professional extends Model
 {
@@ -15,4 +16,9 @@ class Professional extends Model
         'name',
         'type',
     ];
+
+    public function consultations(): HasMany
+    {
+        return $this->hasMany(Consultation::class);
+    }
 }
