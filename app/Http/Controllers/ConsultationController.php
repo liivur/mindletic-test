@@ -6,7 +6,6 @@ use App\Http\Requests\StoreConsultationRequest;
 use App\Http\Requests\UpdateConsultationRequest;
 use App\Models\Consultation;
 use App\Models\Payment;
-use Illuminate\Http\Response;
 use Illuminate\Support\Arr;
 
 class ConsultationController extends Controller
@@ -35,9 +34,8 @@ class ConsultationController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreConsultationRequest  $request
-     * @return \Illuminate\Http\Response
      */
-    public function store(StoreConsultationRequest $request): Response
+    public function store(StoreConsultationRequest $request)
     {
         $data = $request->validated();
         $paymentId = $data['payment_id'];

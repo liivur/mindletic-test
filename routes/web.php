@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\ProfessionalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('consultations', ConsultationController::class);
+Route::resource('professionals', ProfessionalController::class);
